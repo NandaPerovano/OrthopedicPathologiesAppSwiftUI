@@ -14,18 +14,26 @@ struct ContentView: View {
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
             Spacer()
-                    VStack {
-                        Text("Fisioterapia")
-                            .foregroundColor(.yellow)
-                            .font(.system(size: 40, weight: .bold))
-                        Image ("LOGO")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .cornerRadius(20)
-                            .frame(width: 200, height: 200)
-                        Spacer()
-                    }
-                .padding()
+            VStack {
+                
+                Image ("simbolo")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .cornerRadius(20)
+                    .frame(width: 120, height: 120)
+                Text("Fisioterapia")
+                    .foregroundColor(.yellow)
+                    .font(.system(size: 40, weight: .bold))
+                Text("Patologias Ortopédicas")
+                    .foregroundColor(.white)
+                    .font(.system(size: 20))
+                    
+                
+                
+                
+                Spacer()
+            }
+            .padding()
         }
     }
 }
