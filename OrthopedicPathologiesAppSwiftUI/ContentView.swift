@@ -18,6 +18,11 @@ struct ContentView: View {
                         Text("Fisioterapia")
                             .foregroundColor(.yellow)
                             .font(.system(size: 40, weight: .bold))
+                        Image ("LOGO")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .cornerRadius(20)
+                            .frame(width: 200, height: 200)
                         Spacer()
                     }
                 .padding()
