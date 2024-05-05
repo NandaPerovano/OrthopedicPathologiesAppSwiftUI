@@ -27,10 +27,6 @@ struct ContentView: View {
                 Text("Patologias Ortopédicas")
                     .foregroundColor(.white)
                     .font(.system(size: 20))
-                    
-                
-                
-                
                 Spacer()
             }
             .padding()
