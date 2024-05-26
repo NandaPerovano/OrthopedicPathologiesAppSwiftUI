@@ -8,14 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var email: String = ""
+    @State var senha: String = ""
+    
     var body: some View {
         ZStack{
             Image("fundoVerde")
                 .resizable()
                 .edgesIgnoringSafeArea(.all)
-            Spacer()
+            
             VStack {
-                
                 Image ("simbolo")
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -24,9 +27,19 @@ struct ContentView: View {
                 Text("Fisioterapia")
                     .foregroundColor(.yellow)
                     .font(.system(size: 40, weight: .bold))
+                    .padding(.top,40)
                 Text("Patologias Ortopédicas")
                     .foregroundColor(.white)
                     .font(.system(size: 20))
+                TextField("Digite seu email", text: $email)
+                    .textFieldStyle(.roundedBorder)
+                    .foregroundColor(.black)
+                    .keyboardType(.emailAddress)
+                    .padding(.top, 40)
+                SecureField("Digite sua senha", text: $senha)
+                    .textFieldStyle(.roundedBorder)
+                    .foregroundColor(.black)
+                    .keyboardType(.decimalPad)
                 Spacer()
             }
             .padding()
