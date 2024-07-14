@@ -40,9 +40,35 @@ struct ContentView: View {
                     .textFieldStyle(.roundedBorder)
                     .foregroundColor(.black)
                     .keyboardType(.decimalPad)
+                Button {
+                    print("Clique no botão!!")
+                } label: {
+                    Text("Login")
+                        .frame(height: 40)
+                        .frame(maxWidth: .infinity)
+                        .foregroundColor(.yellow)
+                        .font(.system(size: 20, weight: .bold))
+                        .background(Color(.sRGB, red: 0, green: 0.5, blue: 0, opacity: 1))
+                        .cornerRadius(8)
+                        .padding(.top, 10)
+                }
+                
+                HStack{
+                    Text("Não tem conta?")
+                        .foregroundColor(Color.white)
+                    Button {
+                        print("Clique no botão cadastre-se!!")
+                    } label: {
+                        Text("Cadastre-se")
+                            .foregroundColor(.yellow)
+                            .font(.system(size: 18, weight: .semibold))
+                    }
+                }
+                .padding(.top, 10)
+                
                 Spacer()
             }
-            .padding()
+            .padding([.top, .leading, .trailing], 20.0)
         }
     }
 }
