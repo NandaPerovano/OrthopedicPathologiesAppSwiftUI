@@ -8,9 +8,11 @@
 import SwiftUI
 
 struct CadastroView: View {
-    @State private var email: String = ""
-    @State private var senha: String = ""
-
+    
+    @State var email: String = ""
+    @State var senha: String = ""
+    @Environment(\.dismiss) var dismiss
+    
     var body: some View {
         VStack {
             Image("usuario")
@@ -33,7 +35,7 @@ struct CadastroView: View {
                     .shadow(radius: 5)
             }
             Button(action: {
-                print("Clique no botão!!")
+                print("Cadastrar usuário")
             }) {
                 Text("Cadastrar")
                     .foregroundColor(.green)
@@ -44,9 +46,21 @@ struct CadastroView: View {
             Spacer()
         }
         .padding()
-        .navigationBarBackButtonHidden(false)
+        .navigationBarBackButtonHidden(true) 
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                Button(action: {
+                    dismiss()
+                }) {
+                    Image(systemName: "chevron.left")
+                        .foregroundColor(.black)
+                        .font(.title2)
+                }
+            }
+        }
     }
 }
+
 
 struct CadastroView_Previews: PreviewProvider {
     static var previews: some View {
