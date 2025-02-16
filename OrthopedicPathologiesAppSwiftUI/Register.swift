@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct CadastroView: View {
+struct Register: View {
     
     @State var email: String = ""
     @State var senha: String = ""
@@ -35,7 +35,7 @@ struct CadastroView: View {
                     .shadow(radius: 5)
             }
             Button(action: {
-                print("Cadastrar usuário")
+                dismiss() 
             }) {
                 Text("Cadastrar")
                     .foregroundColor(.green)
@@ -46,7 +46,7 @@ struct CadastroView: View {
             Spacer()
         }
         .padding()
-        .navigationBarBackButtonHidden(true) 
+        .navigationBarBackButtonHidden(true)
         .toolbar {
             ToolbarItem(placement: .topBarLeading) {
                 Button(action: {
@@ -61,9 +61,8 @@ struct CadastroView: View {
     }
 }
 
-
 struct CadastroView_Previews: PreviewProvider {
     static var previews: some View {
-        CadastroView()
+        Register()
     }
 }

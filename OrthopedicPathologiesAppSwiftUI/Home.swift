@@ -9,10 +9,11 @@ import SwiftUI
 
 import SwiftUI
 
-struct ContentView: View {
+struct Home: View {
     
     @State var email: String = ""
     @State var senha: String = ""
+    @State private var isNavigatingToPathologis = false
 
     var body: some View {
         NavigationStack {
@@ -49,7 +50,7 @@ struct ContentView: View {
                         .keyboardType(.decimalPad)
 
                     Button {
-                        print("Clique no botão!!")
+                        isNavigatingToPathologis = true
                     } label: {
                         Text("Login")
                             .frame(height: 40)
@@ -60,12 +61,15 @@ struct ContentView: View {
                             .cornerRadius(8)
                             .padding(.top, 10)
                     }
+                    .navigationDestination(isPresented: $isNavigatingToPathologis) {
+                        Pathologies()
+                                   }
 
                     HStack {
                         Text("Não tem conta?")
                             .foregroundColor(Color.white)
 
-                        NavigationLink(destination: CadastroView()) {
+                        NavigationLink(destination: Register()) {
                             Text("Cadastre-se")
                                 .foregroundColor(.yellow)
                                 .font(.system(size: 18, weight: .semibold))
@@ -82,5 +86,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    Home()
 }
