@@ -89,9 +89,9 @@
 				33FC489D2BE8112A005C4001 /* Home.swift */,
 				33DD44E42D5BFF9E00FCEFDA /* Register.swift */,
 				33DD44E62D5E1AF300FCEFDA /* Pathologies.swift */,
+				33DD44F42D62961900FCEFDA /* Search.swift */,
 				33FC489F2BE8112C005C4001 /* Assets.xcassets */,
 				33FC48A12BE8112C005C4001 /* Preview Content */,
-				33DD44F42D62961900FCEFDA /* Search.swift */,
 			);
 			path = OrthopedicPathologiesAppSwiftUI;
 			sourceTree = "<group>";

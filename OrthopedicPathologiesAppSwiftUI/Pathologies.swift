@@ -82,7 +82,7 @@ struct Pathologies: View {
     private func destinationView(for tab: TabItem) -> some View {
         switch tab.tag {
         case 0:
-            return AnyView(Home()) // Home
+            return AnyView(Pathologies()) // Home
         case 1:
             return AnyView(Search()) // Search
         default:
